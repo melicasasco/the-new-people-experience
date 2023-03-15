@@ -394,6 +394,10 @@ img {
   align-items: center;
 }
 
+.box__4 h2{
+padding-top: 2rem;
+}
+
 .box__5{
   background-color: #E94B36;
   min-height: 400px;
@@ -403,6 +407,10 @@ img {
   justify-content: center;
   text-align: center;
   align-items: center;
+}
+
+.box__5 h2{
+  padding-top: 2rem;
 }
 
 .box__6{
@@ -455,7 +463,11 @@ img {
   }
   .section__2, .section__3, .section__4{
     flex-direction: column;
+
     width: 100vw;
+  }
+  .section__2, .section__4{
+    flex-flow: column-reverse;
   }
   .box__2, .box__3, .box__4, .box__5, .box__6, .box__7, .box__8{
     width: 100vw;
@@ -478,6 +490,9 @@ img {
   } h2{
     font-size: 1.3rem;
   }
+  button{
+    font-size: 15px;
+  }
 }
 
 
@@ -498,7 +513,7 @@ button {
   -moz-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
   height: 55px;
-  min-width: 300px;
+/*   min-width: 300px; */
   max-width: 500px;
   cursor: pointer;
 }
