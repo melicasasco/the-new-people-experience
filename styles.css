@@ -8,12 +8,76 @@ h2{
   font-weight: 550;
 }
 
-/* .gradient__title{
+.title-animation{
+  color: var(--second-color);
+  display: block;
   font-size: 2.3rem;
-  color: #4425D7;
-  font-weight: 500;
+  padding-right: 6px;
+  line-height: 1.1;
+  position: relative;
+}
 
-} */
+
+.title-animation::before {
+  animation-name: var(--animation, a);
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  background: linear-gradient(90deg, var(--start-color), var(--end-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+  font-size: 2.3rem;
+  position: absolute;
+  inset: 0;
+  content: var(--content);
+  opacity: 1;
+}
+
+@keyframes a {
+
+  0%,
+  16.667%,
+  100% {
+    opacity: 1;
+  }
+
+  33.333%,
+  83.333% {
+    opacity: 0;
+  }
+}
+
+@keyframes a2 {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  33.333%,
+  50% {
+    opacity: 1;
+  }
+
+  16.667%,
+  66.667% {
+    opacity: 0;
+  }
+}
+
+@keyframes a3 {
+  0%,
+  50%,
+  100% {
+    opacity: 0;
+  }
+
+  66.667%,
+  83.333% {
+    opacity: 1;
+  }
+}
+
 .gradient__title{
   font-size: 2.3rem;
   color: #4425D7;
@@ -282,8 +346,8 @@ img {
 .header__text{
   max-width: 900px;
   text-align: center;
-  padding: 2rem 0 0 0;
-  font-size: 1.2rem;
+  padding: 0.2rem 0;
+  font-size: 1.1rem;
 }
 
 .tendencias__content{
@@ -447,6 +511,12 @@ padding-top: 2rem;
 }
 
 @media screen and (max-width: 600px) {
+  .animation-title-mob{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
   .section__1 {
     flex-direction: column;
     height: 100vh;
@@ -457,6 +527,9 @@ padding-top: 2rem;
   } .box__1 h2{
     padding-top: 2rem;
 
+  }
+  .title-animation{
+    padding-right: 0px;
   }
   .btn-flexibilidad{
     margin-bottom: 6rem!important;
@@ -485,8 +558,9 @@ padding-top: 2rem;
     text-align: justify;
     font-size: 1rem;
   } .header__1 h2 {
-    font-size: 1.4rem;
-    padding-left: 2rem;
+    font-size: 0.3rem;
+    padding-top: 2rem!important;
+
   } h2{
     font-size: 1.3rem;
   }
@@ -507,7 +581,7 @@ button {
   letter-spacing: 2px;
   background: #e18eff;
   color: var(--second-color);
-  overflow: hidden;
+/*   overflow: hidden; */
   box-shadow: 0 0 0 0 transparent;
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
