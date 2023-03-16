@@ -102,22 +102,3 @@ animateNumber1();
 animateNumber2();
 animateNumber3();
 
-// Get the position of the animation section on the page
-const animationSection = document.getElementById("animationSection");
-const sectionTop = animationSection.offsetTop;
-const sectionBottom = sectionTop + animationSection.offsetHeight;
-
-// Listen for the 'onscroll' event
-window.onscroll = function() {
-    console.log("srollllll")
-  // Get the current scroll position of the page
-  const currentScroll = document.documentElement.scrollTop;
-
-  // Check if the current scroll position is within the animation section
-  if (currentScroll >= sectionTop && currentScroll <= sectionBottom) {
-    // Trigger the number animations
-    animateNumber1();
-    animateNumber2();
-    animateNumber3();
-  }
-};
