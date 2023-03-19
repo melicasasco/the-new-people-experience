@@ -611,13 +611,13 @@ button {
   position: relative;
   padding: 15px;
   border-radius: 30px;
-  border: 2px solid #4425D7;
+  border: 2px solid #3498db;
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 2px;
-  background: #e18eff;
-  color: var(--second-color);
+  background: #E94B36;
+  color: #fff;
 /*   overflow: hidden; */
   box-shadow: 0 0 0 0 transparent;
   -webkit-transition: all 0.2s ease-in;
@@ -631,13 +631,13 @@ button {
 }
 
 button:hover {
-  background: #E94B36;
+  background: #e18eff;
 /*   box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815); */
-  border-color: #3498db;
+  border-color: #4425D7;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  color: #fff;
+  color: #feee29;
 }
 /* 
 /*  button:hover::before {

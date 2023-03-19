@@ -59,15 +59,15 @@ const sr = ScrollReveal({
     reset: true
 });
 
-/* SCROLL HOME */
-sr.reveal('.info-A',{}); 
+/* SCROLL TENDENCIAS */
+sr.reveal('.info-A',{ }); 
 sr.reveal('.info-B',{delay: 300}); 
 sr.reveal('.info-C',{ interval: 400}); 
 
-/*SCROLL multicampanias
+//SCROLL multicampanias
 sr.reveal('.multicampanias__img',{}); 
-sr.reveal('.multicampanias__subtitle',{delay: 400}); 
-sr.reveal('.multicampanias__text',{delay: 400}); 
+/* sr.reveal('.multicampanias__subtitle',{delay: 400}); 
+sr.reveal('.multicampanias__text',{delay: 400});  */
 
 /*SCROLL INFO
 sr.reveal('.info__img',{interval: 200}); 
@@ -128,3 +128,15 @@ animateNumber1();
 animateNumber2();
 animateNumber3();
 
+const section = document.querySelector('section');
+
+/* section.addEventListener('scroll', function(event) {
+  const sectionRect = section.getBoundingClientRect();
+  const isSectionInViewport = sectionRect.top <= window.innerHeight && sectionRect.bottom >= 0;
+
+  if (isSectionInViewport) {
+    animateNumber1();
+    animateNumber2();
+    animateNumber3();
+  }
+}); */
