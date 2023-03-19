@@ -1,3 +1,29 @@
+//FORM
+import { addUser } from './firebase.js';
+
+function miForm(event){
+    event.preventDefault();
+    var formulario = document.getElementById("contactForm");
+    var user = {
+        name: formulario.elements.nombre.value,
+        empresa: formulario.elements.empresa.value,
+        campania: formulario.elements.campania.value,
+        email: formulario.elements.email.value
+    }
+    addUser(user)
+    if (user == '') {
+        console.log('llenar campos')
+    } else {
+        alert("gracias por tu mensaje")
+        contactForm.reset();
+    }
+    console.log(user)
+}
+
+var formulario = document.getElementById("contactForm");
+formulario.addEventListener("submit", miForm);
+
+
 /*===== MENU SHOW =====*/ 
 const showMenu = (toggleId, navId) =>{
     const toggle = document.getElementById(toggleId),
