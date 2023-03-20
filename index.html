@@ -13,6 +13,8 @@
 </head>
 
 <body>  
+
+    
     <!-- NAV -->
     <header class="l-header">
         <nav class="nav bd-grid">
@@ -57,7 +59,7 @@
                 gustos, intereses y tipos de disfrute existen.
              </p>
             </div>
-            <button>Ver tendencias</button> 
+           <a class="btn" href="#tendencias" style="text-decoration: none;"> <button">Ver tendencias</button> </a>
             <div>
                 <img src="assets/img-bottom-home.png"  style=" width: 100vw; height: auto; padding-top: 2.1rem; ">
             </div>
@@ -72,7 +74,7 @@
      <!-- TEXTO NUMEROS TENDENCIAS-->
 
      <section >
-        <div class="tendencias__content">
+        <div class="tendencias__content" id="tendencias">
         <div class="info-A" >
                 Hoy <br><span> <h2 ><span style="border-radius: 30px; color: #343a40;  background-color: #FFF855; padding: 0.4rem; line-height: 3rem;" id="number1"> + de 100</span></h2></span> empresas ofrecen Campañas de<br> Beneficios FLEXIBLES en su PVE.
             </div>
@@ -111,7 +113,7 @@
  <section  id="multicampanias">
         <div class="section__1">
             <div class="box__1">
-                <h2 style="padding-top: 30px;">Plataforma de Beneficios FLEXIBLES<br>
+                <h2 style="padding-top: 40px;">Plataforma de Beneficios FLEXIBLES<br>
                     <span style="border-radius: 30px; background-color: #E94B36; padding: 0.4rem; color: #feee29; line-height: 3rem;">Multidispositivo, Multicampañas</span>
                 </h2>
                 <div class="box__text">Un espacio para que las personas se encuentren con lo que buscan.
@@ -120,7 +122,7 @@
                     Eleva el engagement, con las Campañas FLEX y encuestas pulso.
 
                 </div>
-                <div class="btn-flexibilidad" style="margin-bottom: 30px;"><button>más info</button></div>
+                <div class="btn-flexibilidad"><button>más info</button></div>
             </div>
             <div class="box__2">
                 <figure>
@@ -150,7 +152,7 @@
                     <figure>
                         <img src="assets/marcas-bdays.png" width="100%">
                     </figure>
-                    <div class="btn-flexibilidad" style="margin-bottom: 50px;"><button style="background-color: #E94B36; color:#ffffff">más info</button></div>
+                    <div class="btn-flexibilidad"><button style="background-color: #E94B36; color:#ffffff">más info</button></div>
                 </div>
             </div>
         </section> 
@@ -171,7 +173,7 @@
                     <figure>
                         <img src="assets/marcas-almuerzos.png" width="100%">
                     </figure>
-                    <div class="btn-flexibilidad" style="margin-bottom: 40px;"><button style="background-color: #6EC3E4; color:#ffffff">más info</button></div>
+                    <div class="btn-flexibilidad"><button style="background-color: #6EC3E4; color:#ffffff">más info</button></div>
                 </div>
                 <div class="box__6">
                     <figure>
@@ -198,6 +200,10 @@
                     <div class="box__text">Los colaboradores cuentan con la posibilidad de elegir entre diferentes alternativas el regalo por Nacimiento
 
                     </div>
+
+                    <figure>
+                        <img src="assets/marcas-nacimientos.png" width="100%">
+                    </figure>
                     <div class="btn-flexibilidad"><button style="background-color: #E94B36; color: #fff;">más info</button></div>
                 </div>
             </div>
@@ -212,11 +218,10 @@
                         <span style="background-color: #ffffff; padding: 0.8rem; color: #343a40; line-height: 3rem; border: 3px solid #ffffff; color: #6EC3E4;">la Infancia</span>
                     </h2>
                     <div class="box__text">Cada colaborador, mensualmente, verá acreditados en la plataforma los créditos correspondientes para sus almuerzos. Realizará su canje entre las opciones disponibles. Puede combinarlas como prefiera. <br>
-                        Luego, recibirá en su mail los vouchers elegidos para administrarse.
-                        
-    
+                    Luego, recibirá en su mail los vouchers elegidos para administrarse.
                     </div>
-                    <div class="btn-flexibilidad"><button style="background-color: #6EC3E4; color:#ffffff">más info</button></div>
+                    <span>JUGUETES - LIBROS - ENTRETENIMIENTO - VOUCHERS DIGITALES</span>
+                    <div class="btn-flexibilidad"><button style="background-color: #6EC3E4; color:#ffffff;">Más info</button></div>
                 </div>
                 <div class="box__6">
                     <figure>
@@ -237,15 +242,16 @@
                 </figure>
             </div>
             <div class="box__10">
-                <h2>
+                <h2 style="padding-top: 30px;">
                     <span style="border-radius: 30px; background-color: #E94B36; padding: 0.4rem; color: #4425D7; line-height: 3rem;">CHINCHIN - Elegí tu caja</span>
                
                 </h2> 
                 <div class="box__text">Llega el momento de elegir la versión de CAJA que cada persona prefiere para celebrar las fiestas.
                     También podemos activar saludos y mensajes especiales de la compañía.
-                    
-
                 </div>
+                <figure>
+                    <img src="assets/chinchin-boxes.png" width="100%">
+                </figure>
                 <div class="btn-flexibilidad"><button style="background-color: #E94B36; color: #fff;">más info</button></div>
             </div>
         </div>
@@ -313,10 +319,23 @@
                     </form>
             </div>
         </section>
+        
 
+        <!-- POPUP -->
+            <section style="
+            position: fixed;
+            bottom: 50%;
+            left: 0;
+            width: 100%;">
+            <div class="popup" id="popup">
+                <h2>¡Gracias!</h2>
+                <p>Tu mensaje fue enviado.</p>
+                <button id="closeBtn" onclick="closePopup()">OK</button>
+            </div>
+        </section>
         <!-- Más sobre be -->
 
-        <section  id="info">
+        <section  id="info" style="bottom: 0px;" >
             <div class="section__info__bottom">
                 <a href="http://beinspiringtools.com/" target="_blank" style="text-decoration: none;">
                  <div>
@@ -326,10 +345,16 @@
             </div>
         </section>
 
+        <script>
+            function closePopup() {
+            popup.classList.remove("open-popup");
+            } 
+        </script>
+
     <!--===== SCROLL REVEAL =====-->
    <script src="https://unpkg.com/scrollreveal"></script>
     <!--===== mi JS =====-->
    <script type="module" src="./main.js"></script> 
-    
+
 </body>
 </html>

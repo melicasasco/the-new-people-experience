@@ -1,3 +1,16 @@
+//popup
+
+var popup = document.getElementById("popup");
+
+
+ function openPopup() {
+    popup.classList.add("open-popup");
+}
+
+function closePopup() {
+    popup.classList.remove("open-popup");
+} 
+
 //FORM
 import { addUser } from './firebase.js';
 
@@ -14,7 +27,9 @@ function miForm(event){
     if (user == '') {
         console.log('llenar campos')
     } else {
-        alert("gracias por tu mensaje")
+        openPopup(); 
+        console.log("form enviado")
+/*         alert("gracias por tu mensaje") */
         contactForm.reset();
     }
     console.log(user)
@@ -22,6 +37,7 @@ function miForm(event){
 
 var formulario = document.getElementById("contactForm");
 formulario.addEventListener("submit", miForm);
+
 
 
 /*===== MENU SHOW =====*/ 
@@ -140,3 +156,4 @@ const section = document.querySelector('section');
     animateNumber3();
   }
 }); */
+
