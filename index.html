@@ -9,7 +9,28 @@
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The New People Experience</title>
-    
+    <!-- Email JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript"> 
+    (function(){
+        emailjs.init("user_Rdaa9pUbNIqZOIXsb5TbT");
+    })();
+
+    function sendMail() {
+        var formulario = document.getElementById("contactForm");
+        var params = {
+            from_name: formulario.elements.nombre.value,
+            empresa: formulario.elements.empresa.value,
+            campania: formulario.elements.campania.value,
+            email_id: formulario.elements.email.value
+        }
+            emailjs.send("service_9c2v0ot", "template_um4pg5a", params).then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            }, function(error) {
+            console.log('FAILED...', error);
+            });
+        }
+    </script>
 </head>
 
 <body>  
@@ -43,7 +64,7 @@
      <section id="home">
         <div class="header__1">
             <figure>
-                <img src="assets/flexibilidad.png" style="margin: 0 auto; padding-bottom: 1rem; width: 100%; max-width: 250px; height: auto;" width="250">
+                <img src="assets/flexibilidad.svg" style="margin: 0 auto; padding-bottom: 1rem; width: 100%; max-width: 300px; height: auto; padding-top: 1rem;" width="300">
             </figure>
            
             <div>
@@ -61,7 +82,7 @@
             </div>
            <a class="btn" href="#tendencias" style="text-decoration: none;"> <button">Ver tendencias</button> </a>
             <div>
-                <img src="assets/img-bottom-home.png"  style=" width: 100vw; height: auto; padding-top: 2.1rem; ">
+                <img src="assets/img-bottom-home.png"  style=" width: 100vw; height: auto; padding-top: 0rem; ">
             </div>
            
 
@@ -314,7 +335,7 @@
                         type="email" 
                          id="email"
                          required>
-                        <button type="submit" style="background-color: #feee29; color:#343a40; border-radius: 30px; margin-top: 2rem;">Enviar</button>
+                        <button type="submit" style="background-color: #feee29; color:#343a40; border-radius: 30px; margin-top: 2rem;" onclick="sendMail()">Enviar</button>
                         </div>
                     </form>
             </div>
