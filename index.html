@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Sobre Be....">
+    <meta name="keywords" content="palabras clave BE...">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
     <link href='https://fonts.googleapis.com/css?family=Changa One' rel='stylesheet'>
-    <!-- =====BOX ICONS===== -->
+    <!-- ===== BOX ICONS ===== -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The New People Experience</title>
+    
     <!-- Email JS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript"> 
@@ -30,7 +34,10 @@
             console.log('FAILED...', error);
             });
         }
+
+    
     </script>
+    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
 </head>
 
 <body>  
@@ -44,12 +51,12 @@
                     <img   class="nav__logo"src="assets/logo.png" >
                 </a>
             </div>
-            <div class="nav__menu" id="nav-menu">
+            <div class="nav__menu " id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
                     <li class="nav__item"><a href="#multicampanias" class="nav__link">Multicampañas</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contacto</a></li>
-                    <li class="nav__item"><a href="#info" class="nav__link">Más info</a></li>
+                    <li class="nav__item"><a href="#info" class="nav__link">Sobre BE</a></li>
                 </ul>
             </div>
             <div class="nav__toggle" id="nav-toggle">
@@ -80,7 +87,7 @@
                 gustos, intereses y tipos de disfrute existen.
              </p>
             </div>
-           <a class="btn" href="#tendencias" style="text-decoration: none;"> <button">Ver tendencias</button> </a>
+           <a class="btn browser-default" href="#tendencias" style="text-decoration: none;"> <button">Ver tendencias</button> </a>
             <div>
                 <img src="assets/img-bottom-home.png"  style=" width: 100vw; height: auto; padding-top: 0rem; ">
             </div>
@@ -96,6 +103,7 @@
 
      <section >
         <div class="tendencias__content" id="tendencias">
+
         <div class="info-A" >
                 Hoy <br><span> <h2 ><span style="border-radius: 30px; color: #343a40;  background-color: #FFF855; padding: 0.4rem; line-height: 3rem;" id="number1"> + de 100</span></h2></span> empresas ofrecen Campañas de<br> Beneficios FLEXIBLES en su PVE.
             </div>
@@ -121,12 +129,30 @@
         </div>
      </section>
 
-     <!-- AQUI IRIA GRAFICO TENDENCIAS -->
+     <!-- AQUI GRAFICOS TENDENCIAS -->
 
      <section class="tendencias__content2">
-        <figure>
-            <img src="assets/tendencias.png" width="900px" style="margin: 0 auto; display: block;">
-        </figure>
+        <h2>Tendencias</h2>
+        <section class="slider">
+            <button class="slider__control prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="slider__control next"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="slider__container" data-multislide="true" data-step="3">
+              <div class="slider__item">
+                <img src="assets/chart-bts.png" alt="" width="600px">
+              </div>
+              <div class="slider__item">
+                  <img src="assets/chart-chinchin.png" alt="" width="600px">
+              </div>
+              <div class="slider__item">
+                  <img src="assets/chart-ddn.png" alt="" width="600px">
+              </div>
+              <div class="slider__item">
+                <img src="assets/chart-lunchtime.png" alt="" width="600px">
+              </div>
+           
+            </div>
+          </section>
+       
      </section>
 
     <!-- MULTICAMPAÑAS -->
@@ -143,7 +169,7 @@
                     Eleva el engagement, con las Campañas FLEX y encuestas pulso.
 
                 </div>
-                <div class="btn-flexibilidad"><button>más info</button></div>
+                <div class="btn-box"><button>más info</button></div>
             </div>
             <div class="box__2">
                 <figure>
@@ -167,13 +193,17 @@
                     <h2 style="color: white; padding-top: 40px;">Celebrate B-days</h2>
                     <img src="assets/onda.png" style="display: block;">
                     <div class="box__text" style="color: white">Activamos un saludo especial y sorpresa en el día del cumpleaños de cada colaborador.
-                        ¡Y lo invitamos a que elija cómo celebrar su día!
+                        <b>¡Y lo invitamos a que elija cómo celebrar su día!</b>
                         
                     </div>
                     <figure>
                         <img src="assets/marcas-bdays.png" width="100%">
                     </figure>
-                    <div class="btn-flexibilidad"><button style="background-color: #E94B36; color:#ffffff">más info</button></div>
+                    <div class="btn-box">
+                        <a href="sections/bdays.html">
+                            <button style="background-color: #E94B36; color:#ffffff">más info</button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section> 
@@ -184,21 +214,25 @@
             <div class="section__3">
                 <div class="box__5">
                     <h2  style="padding-top: 50px;">Almuerzos
-                        <span style="border-radius: 30px; background-color: #E94B36; padding: 0.4rem; color: #343a40; line-height: 3rem; border: 3px solid #ffffff; color: #ffffff;">Home Office</span>
+                        <span style="border-radius: 30px; background-color: #3498db; padding: 0.4rem; color: #3498db; line-height: 3rem; border: 3px solid #000; color: #000;">Home Office</span>
                     </h2>
-                    <div class="box__text">Cada colaborador, mensualmente, verá acreditados en la plataforma los créditos correspondientes para sus almuerzos. Realizará su canje entre las opciones disponibles. Puede combinarlas como prefiera. <br>
-                        Luego, recibirá en su mail los vouchers elegidos para administrarse.
+                    <div class="box__text" style="padding-bottom: 30px;">Cada colaborador, mensualmente, verá acreditados en la plataforma los créditos correspondientes para sus almuerzos.<br> <br>Realizará su canje entre las opciones disponibles. Puede combinarlas como prefiera. <br><br>
+                    Luego, recibirá en su mail los vouchers elegidos para administrarse.
                         
                     </div>
 
-                    <figure>
+                <!--     <figure>
                         <img src="assets/marcas-almuerzos.png" width="100%">
-                    </figure>
-                    <div class="btn-flexibilidad"><button style="background-color: #6EC3E4; color:#ffffff">más info</button></div>
+                    </figure> -->
+                    <div style="padding-bottom: 2rem;">
+                        <a href="sections/almuerzos.html">
+                            <button style="background-color: #4425D7; color:#ffffff">más info</button>
+                        </a>
+                    </div>
                 </div>
                 <div class="box__6">
                     <figure>
-                        <img src="assets/home-office.png" width="600px">
+                        <img src="assets/almuerzos-img.png" width="200px" style="margin: 0 auto">
                     </figure>
                 </div>
             </div>
@@ -225,7 +259,11 @@
                     <figure>
                         <img src="assets/marcas-nacimientos.png" width="100%">
                     </figure>
-                    <div class="btn-flexibilidad"><button style="background-color: #E94B36; color: #fff;">más info</button></div>
+                    <div>
+                    <a href="sections/nacimientos.html">
+                        <button style="background-color: #E94B36; color:#ffffff">más info</button>
+                    </a>
+                </div>
                 </div>
             </div>
         </section>
@@ -240,9 +278,13 @@
                     </h2>
                     <div class="box__text">Cada colaborador, mensualmente, verá acreditados en la plataforma los créditos correspondientes para sus almuerzos. Realizará su canje entre las opciones disponibles. Puede combinarlas como prefiera. <br>
                     Luego, recibirá en su mail los vouchers elegidos para administrarse.
-                    </div>
+                    </div><br>
                     <span>JUGUETES - LIBROS - ENTRETENIMIENTO - VOUCHERS DIGITALES</span>
-                    <div class="btn-flexibilidad"><button style="background-color: #6EC3E4; color:#ffffff;">Más info</button></div>
+                    <div>
+                    <a href="sections/infancia.html">
+                        <button style="background-color: #6EC3E4; color:#ffffff">más info</button>
+                    </a>
+                </div>
                 </div>
                 <div class="box__6">
                     <figure>
@@ -273,7 +315,11 @@
                 <figure>
                     <img src="assets/chinchin-boxes.png" width="100%">
                 </figure>
-                <div class="btn-flexibilidad"><button style="background-color: #E94B36; color: #fff;">más info</button></div>
+                <div>
+                <a href="sections/chinchin.html">
+                    <button style="background-color: #E94B36; color:#ffffff">más info</button>
+                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -290,7 +336,11 @@
 
 
                 </div>
-                <div class="btn-flexibilidad"><button style="background-color: #343a40; color: #fff;">más info</button></div>
+                <div>
+                    <a href="sections/bts.html">
+                        <button style="background-color: #6EC3E4; color:#ffffff">más info</button>
+                    </a>
+                </div>
             </div>
             <div class="box__12">
                 <figure>
@@ -306,11 +356,13 @@
         <section class="section__form">
                 <div style="margin: 0 auto; display: flex; justify-content: center; padding: 2rem 0 2rem 0;" id="contact">
                     <form class="form" id="contactForm">
-                        <span class="title">¡Contactate con nosotros!</span>
+                        <div  class="title" style="display: flex; flex-direction: row; justify-content: center;">
+                        <div>¡Contactanos!</div>
+                        <div> <img src="assets/happy-face-yellow.png" width="25px" style="float: right;"></div>
+                    </div>
                       <!--   <div class="alert">Your message has been sent!</div> -->
                       <!--   <p class="description">Nostrud amet eu ullamco nisi aute in ad minim nostrud adipisicing velit quis.</p> -->
-                        <div style="color: #feee29; font-weight: 600;">
-                     
+                        <div style="color: #feee29; font-weight: 600;" class="browser-default">
                         <label for="nombre">Nombre y apellido</label>
                         <input 
                         placeholder="tu nombre y apellido"  
@@ -359,9 +411,9 @@
         <section  id="info" style="bottom: 0px;" >
             <div class="section__info__bottom">
                 <a href="http://beinspiringtools.com/" target="_blank" style="text-decoration: none;">
-                 <div>
-                    <h2>Conocé más sobre nosotros</h2>
-                 </div>
+                    <h2>Conocé más sobre<span>
+                        <embed src="assets/logo-footer.svg" width="45px" style="float: right; padding-bottom: 3rem!important;" class="logo-footer">
+                            <!-- <img src="assets/logo-footer.svg"  style="float: right; padding-bottom: 3rem!important;" class="logo-footer" width="45px"> --></span></h2> 
                 </a>
             </div>
         </section>
@@ -369,7 +421,87 @@
         <script>
             function closePopup() {
             popup.classList.remove("open-popup");
-            } 
+            }
+        </script>
+      <script>
+      
+        const sliders = [...document.querySelectorAll(".slider__container")];
+        const sliderControlPrev = [...document.querySelectorAll(".slider__control.prev")];
+        const sliderControlNext = [...document.querySelectorAll(".slider__control.next")];
+        
+        sliders.forEach((slider, i) => {
+          let isDragStart = false,
+              isDragging = false,
+              isSlide = false,
+              prevPageX,
+              prevScrollLeft,
+              positionDiff;
+        
+          const sliderItem = slider.querySelector(".slider__item");
+          var isMultislide = (slider.dataset.multislide === 'true');
+        
+          sliderControlPrev[i].addEventListener('click', () => {
+            if (isSlide) return;
+            isSlide = true;
+            let slideWidth = isMultislide ? slider.clientWidth : sliderItem.clientWidth;
+            slider.scrollLeft += -slideWidth;
+            setTimeout(function(){ isSlide = false; }, 700);
+          });
+        
+          sliderControlNext[i].addEventListener('click', () => {
+            if (isSlide) return;
+            isSlide = true;
+            let slideWidth = isMultislide ? slider.clientWidth : sliderItem.clientWidth ;
+            slider.scrollLeft += slideWidth;
+            setTimeout(function(){ isSlide = false; }, 700);
+          });
+        
+          function autoSlide() {
+            if(slider.scrollLeft - (slider.scrollWidth - slider.clientWidth) > -1 || slider.scrollLeft <= 0) return;
+            positionDiff = Math.abs(positionDiff);
+            let slideWidth = isMultislide ? slider.clientWidth : sliderItem.clientWidth;
+            let valDifference = slideWidth - positionDiff;
+            if(slider.scrollLeft > prevScrollLeft) {
+                return slider.scrollLeft += positionDiff > slideWidth / 5 ? valDifference : -positionDiff;
+            }
+            slider.scrollLeft -= positionDiff > slideWidth / 5 ? valDifference : -positionDiff;
+          }
+        
+          function dragStart(e) {
+            if (isSlide) return;
+            isSlide = true;
+            isDragStart = true;
+            prevPageX = e.pageX || e.touches[0].pageX;
+            prevScrollLeft = slider.scrollLeft;
+            setTimeout(function(){ isSlide = false; }, 700);
+          }
+        
+          function dragging(e) {
+            if(!isDragStart) return;
+            e.preventDefault();
+            isDragging = true;
+            slider.classList.add("dragging");
+            positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+            slider.scrollLeft = prevScrollLeft - positionDiff;
+          }
+        
+          function dragStop() {
+            isDragStart = false;
+            slider.classList.remove("dragging");
+            if(!isDragging) return;
+            isDragging = false;
+            autoSlide();
+          }
+        
+          addEventListener("resize", autoSlide);
+          slider.addEventListener("mousedown", dragStart);
+          slider.addEventListener("touchstart", dragStart);
+          slider.addEventListener("mousemove", dragging);
+          slider.addEventListener("touchmove", dragging);
+          slider.addEventListener("mouseup", dragStop);
+          slider.addEventListener("touchend", dragStop);
+          slider.addEventListener("mouseleave", dragStop);
+        });
         </script>
 
     <!--===== SCROLL REVEAL =====-->

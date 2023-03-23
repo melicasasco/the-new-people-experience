@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Sobre Be....">
+        <meta name="keywords" content="palabras clave BE...">
+        <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+        <link href='https://fonts.googleapis.com/css?family=Changa One' rel='stylesheet'>
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="../styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The New People Experience</title>
+        <!-- Email JS -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript"> 
+        (function(){
+            emailjs.init("user_Rdaa9pUbNIqZOIXsb5TbT");
+        })();
+    
+        function sendMail() {
+            var formulario = document.getElementById("contactForm");
+            var params = {
+                from_name: formulario.elements.nombre.value,
+                empresa: formulario.elements.empresa.value,
+                campania: formulario.elements.campania.value,
+                email_id: formulario.elements.email.value
+            }
+                emailjs.send("service_9c2v0ot", "template_um4pg5a", params).then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                }, function(error) {
+                console.log('FAILED...', error);
+                });
+            }
+        </script>
+    </head>
+<body>
+        <!-- NAV -->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="../index.html">
+                        <img   class="nav__logo"src="../assets/logo.png" >
+                    </a>
+                </div>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="../index.html#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="../index.html#multicampanias" class="nav__link">Multicampañas</a></li>
+                        <li class="nav__item"><a href="../index.html#contact" class="nav__link">Contacto</a></li>
+                        <li class="nav__item"><a href="../index.html#info" class="nav__link">Más info</a></li>
+                    </ul>
+                </div>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+        <!-- NAV -->
+        <section class="tendencias__section">
+            <h2>CHINCHIN INFO</h2>
+        </section>
+
+</body>
+</html>

@@ -144,16 +144,4 @@ animateNumber1();
 animateNumber2();
 animateNumber3();
 
-const section = document.querySelector('section');
-
-/* section.addEventListener('scroll', function(event) {
-  const sectionRect = section.getBoundingClientRect();
-  const isSectionInViewport = sectionRect.top <= window.innerHeight && sectionRect.bottom >= 0;
-
-  if (isSectionInViewport) {
-    animateNumber1();
-    animateNumber2();
-    animateNumber3();
-  }
-}); */
 
