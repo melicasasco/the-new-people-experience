@@ -531,12 +531,11 @@ padding-top: 2rem;
   background-color: #fff;
   min-height: 400px;
   width: 50vw;
-  display: flex;
   
 }
 
 .box__10{
-  background-color: #4425D7;
+  background-color: #a7d898;
   min-height: 400px;
   width: 50vw;
   display: flex;
@@ -544,10 +543,11 @@ padding-top: 2rem;
   justify-content: center;
   text-align: center;
   align-items: center;
+  color: #000;
 }
 
 .box__11{
-  background-color: #feee29;
+  background-color: #faf663;
   min-height: 400px;
   width: 50vw;
   display: flex;
@@ -632,6 +632,9 @@ padding-top: 2rem;
 
   } h2{
     font-size: 1.3rem;
+  }.btn-ver-tendencias{
+    padding-bottom: 30px;
+    padding-top: 0!important;
   }
   button, .btn{
     font-size: 11px!important;
@@ -655,7 +658,7 @@ padding-top: 2rem;
     width: 100%!important;
     padding: 0px 20px 20px 20px!important;
     justify-content: center;
-    height: 70vh!important;
+    height: 60vh!important;
     text-align: center;
   } .tendencias__section__2{
     width: 100%!important;
@@ -666,6 +669,8 @@ padding-top: 2rem;
     margin: 1rem;
   }.flex{
     padding-left: 2rem!important;
+  } .box__text{
+    padding: 1rem;
   }
 }
 
@@ -848,7 +853,7 @@ button:active {
   flex-direction: column;
   justify-content: start;
   gap: 0rem;
-  padding-top: 3rem;
+  padding-top: 1rem;
   padding-left: 2rem;
   height: 100vh;
   color: var(--second-color);
