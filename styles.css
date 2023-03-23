@@ -621,7 +621,7 @@ padding-top: 2rem;
     flex-direction: column;
   justify-content: center;
     gap: 2rem;
-    height: 50vh;
+    height: 90vh;
   }.header__text{
     margin: 2rem;
     text-align: justify;
