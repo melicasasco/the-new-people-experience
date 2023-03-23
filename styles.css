@@ -446,13 +446,13 @@ padding: 0;
   margin: 0 auto;
   padding: 2rem 2rem 0rem 2rem;
   font-size: 0.9rem;
-  max-width: 650px;
+  max-width: 550px;
   line-height: 1.5rem;
-  text-align: justify!important;
+  text-align: center;
 }
 
 .box__2{
-  background-color: #ffffff;
+  background-color: #feee29;
   min-height: 400px;
   width: 50vw;
 
@@ -488,7 +488,7 @@ padding-top: 2rem;
 }
 
 .box__5{
-  background-color: #3498db;
+  background-color: #6ec3e4;
   min-height: 400px;
   width: 50vw;
   display: flex;
@@ -517,7 +517,7 @@ padding-top: 2rem;
 }
 
 .box__8{
-  background-color: #4425D7;
+  background-color: #4472c4;
   min-height: 400px;
   width: 50vw;
   display: flex;
@@ -654,9 +654,9 @@ padding-top: 2rem;
     flex-direction: column;
   }.tendencias__section__1{
     width: 100%!important;
-    padding: 20px!important;
+    padding: 0px 20px 20px 20px!important;
     justify-content: center;
-    height: 80vh!important;
+    height: 50vh!important;
     text-align: center;
   } .tendencias__section__2{
     width: 100%!important;
@@ -858,7 +858,7 @@ button:active {
 
 .tendencias__section__2{
   padding-top: 3rem;
-  background-color: #3498db;
+  background-color: #6ec3e4;
   width: 50%;
 }
 
