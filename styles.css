@@ -583,7 +583,6 @@ padding-top: 2rem;
   }
   .section__1 {
     flex-direction: column;
-    height: 100vh;
   }
   .box__1{
     width: 100vw;
@@ -622,7 +621,7 @@ padding-top: 2rem;
     flex-direction: column;
   justify-content: center;
     gap: 2rem;
-    height: 100vh;
+    height: 50vh;
   }.header__text{
     margin: 2rem;
     text-align: justify;
@@ -663,6 +662,10 @@ padding-top: 2rem;
     padding: 20px!important;
     justify-content: center;
     text-align: center;
+  }.slider__container {
+    margin: 1rem;
+  }.flex{
+    padding-left: 2rem!important;
   }
 }
 
@@ -837,14 +840,14 @@ button:active {
 .tendencias-container{
   display: flex;
   justify-content: center;
-  padding-top: 1rem;
+  padding-top: 0rem;
 }
 
 .tendencias__section__1{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: .2rem;
+  justify-content: start;
+  gap: 0rem;
   padding-top: 3rem;
   padding-left: 2rem;
   height: 100vh;
