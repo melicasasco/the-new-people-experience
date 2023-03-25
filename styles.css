@@ -530,7 +530,6 @@ padding-top: 2rem;
   background-color: #fff;
   min-height: 400px;
   width: 50vw;
-  display: flex;
 }
 
 .box__10{
@@ -631,9 +630,8 @@ padding-top: 2rem;
 
   } h2{
     font-size: 1.3rem;
-  }.btn-ver-tendencias{
-    padding-bottom: 30px;
-    padding-top: 0!important;
+  }.img-ver-tendencias{
+    padding-top: 30px;
   }
   button, .btn{
     font-size: 11px!important;
@@ -670,7 +668,15 @@ padding-top: 2rem;
     padding-left: 2rem!important;
   } .box__text{
     padding: 1rem;
-  }
+  }.infancia{
+    height: 40vh!important;
+  } .bdays .chinchin{
+    height: 48vh!important;
+  }.chinchin{
+    height: 45vh!important;   
+} .bts{
+  height: 48vh!important;
+}
 }
 
 
@@ -973,4 +979,5 @@ button:active {
   -moz-user-drag: none;
   -o-user-drag: none;
   user-select: none;
+  display: block;
 }
