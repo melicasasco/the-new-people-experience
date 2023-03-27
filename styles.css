@@ -626,7 +626,7 @@ padding-top: 2rem;
   }
 
   .box__2, .box__3, .box__4, .box__5, .box__6, .box__7, .box__8, .box__9, .box__10, .box__11, .box__12{
-    min-height: 300px;
+    min-height: auto;
     width: 100vw;
   } .imagen-cumple{
     height: 400px;
