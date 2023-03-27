@@ -82,16 +82,7 @@ sr.reveal('.info-C',{ interval: 400});
 
 //SCROLL multicampanias
 sr.reveal('.multicampanias__img',{}); 
-/* sr.reveal('.multicampanias__subtitle',{delay: 400}); 
-sr.reveal('.multicampanias__text',{delay: 400});  */
 
-/*SCROLL INFO
-sr.reveal('.info__img',{interval: 200}); 
-sr.reveal('.info__img-destacados',{interval: 200}); 
-sr.reveal('.info__img-arreglos',{interval: 200}); */
-
-/*SCROLL CONTACT*/
-sr.reveal('.contact__input',{interval: 200}); 
 
 //number animations
 
@@ -144,4 +135,6 @@ animateNumber1();
 animateNumber2();
 animateNumber3();
 
+
+//prueba btn
 

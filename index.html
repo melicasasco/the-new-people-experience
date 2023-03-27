@@ -6,14 +6,16 @@
     <meta name="description" content="Somos una agencia de comunicación interna y experiencia empleado. Creamos iniciativas que atienden a la diversidad de los distintos perfiles que conviven en los equipos de trabajo.Los programas de beneficios flexibles potencian la propuesta de valor de la empresa ofreciendo la posibilidad de elegir a cada empleado lo que más les gusta.">
     <meta name="keywords" content="beneficios flexibles, experiencia empleado, people experience, comunicación interna, welcome kits, beneficios empleados">
     <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <!-- ===== TIPOGRAFIA ===== -->
     <link href='https://fonts.googleapis.com/css?family=Changa One' rel='stylesheet'>
+    <!-- ===== FONT AWESOME ===== -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <!-- ===== BOX ICONS ===== -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The New People Experience</title>
-    
     <!-- Email JS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript"> 
@@ -30,20 +32,22 @@
             email_id: formulario.elements.email.value
         }
             emailjs.send("service_9c2v0ot", "template_um4pg5a", params).then(function(response) {
+            confetti();
             console.log('SUCCESS!', response.status, response.text);
             }, function(error) {
             console.log('FAILED...', error);
             });
         }
-
-
     </script>
     <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+    <script>
+       document.getElementsByClassName("confetti-button")[0].addEventListener("click", () => {
+        confetti();
+       })
+    </script>
 </head>
 
 <body>  
-
-    
     <!-- NAV -->
     <header class="l-header">
         <nav class="nav bd-grid">
@@ -92,16 +96,12 @@
             <div class="img-ver-tendencias">
                 <img src="assets/img-bottom-home.png"  style=" width: 100vw; height: auto; padding-top: 0rem; ">
             </div>
-           
-
         </div>
-
      </section>
 
      <!-- fin seccion 1 -->
 
      <!-- TEXTO NUMEROS TENDENCIAS-->
-
      <section >
         <div class="tendencias__content" id="tendencias">
 
@@ -159,7 +159,6 @@
            
             </div>
           </section>
-       
      </section>
 
     <!-- MULTICAMPAÑAS -->
@@ -179,7 +178,6 @@
                     <br><br>
                     Eleva el engagement, con las<b> Campañas FLEX y
                     encuestas pulso.</b>
-
                 </div>
              <!--    <div class="btn-box"><button>más info</button></div> -->
             </div>
@@ -193,7 +191,6 @@
 
 
          <!-- CUMPLEAÑOS -->
-
           <section id="cumples">
             <div class="section__2">
                 <div class="box__3">
@@ -404,13 +401,12 @@
                         type="email" 
                          id="email"
                          required>
-                        <button type="submit" style="background-color: #feee29; color:#343a40; border-radius: 30px; margin-top: 2rem;" onclick="sendMail()">Enviar</button>
+                        <button type="submit" id="idConfetti" style="background-color: #feee29; color:#343a40; border-radius: 30px; margin-top: 2rem;" onclick="sendMail()">Enviar</button>
                         </div>
                     </form>
             </div>
         </section>
         
-
         <!-- POPUP -->
             <section style="
             position: fixed;
@@ -423,8 +419,9 @@
                 <button id="closeBtn" onclick="closePopup()">OK</button>
             </div>
         </section>
-        <!-- Más sobre be -->
 
+        <!-- Más sobre be -->
+        
         <section  id="info" style="bottom: 0px;" >
             <div class="section__info__bottom">
                 <a href="http://beinspiringtools.com/" target="_blank" style="text-decoration: none;">
@@ -434,102 +431,100 @@
                 </a>
             </div>
         </section>
-
         <script>
             function closePopup() {
             popup.classList.remove("open-popup");
             }
         </script>
-      <script>
-      
-        const sliders = [...document.querySelectorAll(".slider__container")];
-        const sliderControlPrev = [...document.querySelectorAll(".slider__control.prev")];
-        const sliderControlNext = [...document.querySelectorAll(".slider__control.next")];
+        <script>
         
-        sliders.forEach((slider, i) => {
-          let isDragStart = false,
-              isDragging = false,
-              isSlide = false,
-              prevPageX,
-              prevScrollLeft,
-              positionDiff;
-        
-          const sliderItem = slider.querySelector(".slider__item");
-          var isMultislide = (slider.dataset.multislide === 'true');
-        
-          sliderControlPrev[i].addEventListener('click', () => {
-            if (isSlide) return;
-            isSlide = true;
-            let slideWidth = isMultislide ? slider.clientWidth : sliderItem.clientWidth;
-            slider.scrollLeft += -slideWidth;
-            setTimeout(function(){ isSlide = false; }, 700);
-          });
-        
-          sliderControlNext[i].addEventListener('click', () => {
-            if (isSlide) return;
-            isSlide = true;
-            let slideWidth = isMultislide ? slider.clientWidth : sliderItem.clientWidth ;
-            slider.scrollLeft += slideWidth;
-            setTimeout(function(){ isSlide = false; }, 700);
-          });
-        
-             function autoSlide() {
-            if(slider.scrollLeft - (slider.scrollWidth - slider.clientWidth) > -1 || slider.scrollLeft <= 0) return;
-            positionDiff = Math.abs(positionDiff);
-            let slideWidth = isMultislide ? slider.clientWidth : sliderItem.clientWidth;
-            let valDifference = slideWidth - positionDiff;
-            if(slider.scrollLeft > prevScrollLeft) {
-                return slider.scrollLeft += positionDiff > slideWidth / 5 ? valDifference : -positionDiff;
-            }
-            slider.scrollLeft -= positionDiff > slideWidth / 5 ? valDifference : -positionDiff;
-          } 
-
-/*           function autoSlide() {
-            let slideWidth = isMultislide ? slider.clientWidth : sliderItem.clientWidth;
-            if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
-                slider.scrollLeft = 0;
-            } else {
+            const sliders = [...document.querySelectorAll(".slider__container")];
+            const sliderControlPrev = [...document.querySelectorAll(".slider__control.prev")];
+            const sliderControlNext = [...document.querySelectorAll(".slider__control.next")];
+            
+            sliders.forEach((slider, i) => {
+            let isDragStart = false,
+                isDragging = false,
+                isSlide = false,
+                prevPageX,
+                prevScrollLeft,
+                positionDiff;
+            
+            const sliderItem = slider.querySelector(".slider__item");
+            var isMultislide = (slider.dataset.multislide === 'true');
+            
+            sliderControlPrev[i].addEventListener('click', () => {
+                if (isSlide) return;
+                isSlide = true;
+                let slideWidth = isMultislide ? slider.clientWidth : sliderItem.clientWidth;
+                slider.scrollLeft += -slideWidth;
+                setTimeout(function(){ isSlide = false; }, 700);
+            });
+            
+            sliderControlNext[i].addEventListener('click', () => {
+                if (isSlide) return;
+                isSlide = true;
+                let slideWidth = isMultislide ? slider.clientWidth : sliderItem.clientWidth ;
                 slider.scrollLeft += slideWidth;
-            }
-            }
-         */
-          function dragStart(e) {
-            if (isSlide) return;
-            isSlide = true;
-            isDragStart = true;
-            prevPageX = e.pageX || e.touches[0].pageX;
-            prevScrollLeft = slider.scrollLeft;
-            setTimeout(function(){ isSlide = false; }, 700);
-          }
-        
-          function dragging(e) {
-            if(!isDragStart) return;
-            e.preventDefault();
-            isDragging = true;
-            slider.classList.add("dragging");
-            positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
-            slider.scrollLeft = prevScrollLeft - positionDiff;
-          }
-        
-          function dragStop() {
-            isDragStart = false;
-            slider.classList.remove("dragging");
-            if(!isDragging) return;
-            isDragging = false;
-            autoSlide();
-          }
-        
-          addEventListener("resize", autoSlide);
-          slider.addEventListener("mousedown", dragStart);
-          slider.addEventListener("touchstart", dragStart);
-          slider.addEventListener("mousemove", dragging);
-          slider.addEventListener("touchmove", dragging);
-          slider.addEventListener("mouseup", dragStop);
-          slider.addEventListener("touchend", dragStop);
-          slider.addEventListener("mouseleave", dragStop);
-        });
-        </script>
+                setTimeout(function(){ isSlide = false; }, 700);
+            });
+            
+                function autoSlide() {
+                if(slider.scrollLeft - (slider.scrollWidth - slider.clientWidth) > -1 || slider.scrollLeft <= 0) return;
+                positionDiff = Math.abs(positionDiff);
+                let slideWidth = isMultislide ? slider.clientWidth : sliderItem.clientWidth;
+                let valDifference = slideWidth - positionDiff;
+                if(slider.scrollLeft > prevScrollLeft) {
+                    return slider.scrollLeft += positionDiff > slideWidth / 5 ? valDifference : -positionDiff;
+                }
+                slider.scrollLeft -= positionDiff > slideWidth / 5 ? valDifference : -positionDiff;
+            } 
 
+    /*           function autoSlide() {
+                let slideWidth = isMultislide ? slider.clientWidth : sliderItem.clientWidth;
+                if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
+                    slider.scrollLeft = 0;
+                } else {
+                    slider.scrollLeft += slideWidth;
+                }
+                }
+            */
+            function dragStart(e) {
+                if (isSlide) return;
+                isSlide = true;
+                isDragStart = true;
+                prevPageX = e.pageX || e.touches[0].pageX;
+                prevScrollLeft = slider.scrollLeft;
+                setTimeout(function(){ isSlide = false; }, 700);
+            }
+            
+            function dragging(e) {
+                if(!isDragStart) return;
+                e.preventDefault();
+                isDragging = true;
+                slider.classList.add("dragging");
+                positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+                slider.scrollLeft = prevScrollLeft - positionDiff;
+            }
+            
+            function dragStop() {
+                isDragStart = false;
+                slider.classList.remove("dragging");
+                if(!isDragging) return;
+                isDragging = false;
+                autoSlide();
+            }
+            
+            addEventListener("resize", autoSlide);
+            slider.addEventListener("mousedown", dragStart);
+            slider.addEventListener("touchstart", dragStart);
+            slider.addEventListener("mousemove", dragging);
+            slider.addEventListener("touchmove", dragging);
+            slider.addEventListener("mouseup", dragStop);
+            slider.addEventListener("touchend", dragStop);
+            slider.addEventListener("mouseleave", dragStop);
+            });
+        </script>
     <!--===== SCROLL REVEAL =====-->
    <script src="https://unpkg.com/scrollreveal"></script>
     <!--===== mi JS =====-->
