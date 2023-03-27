@@ -24,6 +24,7 @@
     })();
 
     function sendMail() {
+        confetti();
         var formulario = document.getElementById("contactForm");
         var params = {
             from_name: formulario.elements.nombre.value,
@@ -32,7 +33,7 @@
             email_id: formulario.elements.email.value
         }
             emailjs.send("service_9c2v0ot", "template_um4pg5a", params).then(function(response) {
-            confetti();
+            
             console.log('SUCCESS!', response.status, response.text);
             }, function(error) {
             console.log('FAILED...', error);
