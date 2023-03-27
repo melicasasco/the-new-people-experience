@@ -575,7 +575,18 @@ padding-top: 2rem;
   padding: 4rem;
 }
 
+.cajas{
+  display: flex;
+  justify-content: center;
+}
+
 @media screen and (max-width: 600px) {
+  .cajas{
+    flex-direction: column!important;
+  } .cajas img {
+    padding-bottom: 0!important;
+    padding-top: 0!important;
+  }
   .animation-title-mob{
     display: flex;
     flex-direction: column;
