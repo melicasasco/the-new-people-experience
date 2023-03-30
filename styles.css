@@ -896,6 +896,7 @@ button:active {
   gap: 0rem;
   padding-top: 1rem;
   padding-left: 2rem;
+  padding-bottom: 2rem;
 /*   height: 85vh; */
   color: var(--second-color);
   width: 50%;
