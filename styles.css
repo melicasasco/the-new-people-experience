@@ -572,7 +572,7 @@ padding-top: 2rem;
 }
 
 .bts-section--text{
-  padding: 4rem;
+  padding: 4rem 12rem 4rem 12rem;
 }
 
 .cajas{
@@ -593,7 +593,7 @@ padding-top: 2rem;
     justify-content: center;
     text-align: center;
   } .bts-section--text{
-    padding: 2rem;
+    padding: 2rem!important;
   } .bts-section--container{
     padding-top: 1rem;
   }
