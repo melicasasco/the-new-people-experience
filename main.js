@@ -1,3 +1,4 @@
+
 //popup
 
 var popup = document.getElementById("popup");
@@ -14,7 +15,35 @@ function closePopup() {
 //FORM
 import { addUser } from './firebase.js';
 
-function miForm(event){
+
+function miForm(event) {
+    event.preventDefault();
+  
+    var formulario = document.getElementById("contactForm");
+    var nombre = formulario.elements.nombre.value;
+    var empresa = formulario.elements.empresa.value;
+    var campania = formulario.elements.campania.value;
+    var email = formulario.elements.email.value;
+  
+    // Validar si los campos están completados
+    if (nombre === "" || empresa === "" || campania === "" || email === "") {
+      return;
+    }
+    
+    var user = {
+      name: nombre,
+      empresa: empresa,
+      campania: campania,
+      email: email
+    };
+  
+    addUser(user);
+    openPopup();
+    console.log("form enviado");
+    formulario.reset();
+  }
+  
+/* function miForm(event){
     event.preventDefault();
     var formulario = document.getElementById("contactForm");
     var user = {
@@ -29,11 +58,11 @@ function miForm(event){
     } else {
         openPopup(); 
         console.log("form enviado")
-/*         alert("gracias por tu mensaje") */
+
         contactForm.reset();
     }
     console.log(user)
-}
+} */
 
 var formulario = document.getElementById("contactForm");
 formulario.addEventListener("submit", miForm);

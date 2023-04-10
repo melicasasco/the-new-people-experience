@@ -31,7 +31,7 @@
     })();
 
     function sendMail() {
-        confetti();
+      /*   confetti(); */
         var formulario = document.getElementById("contactForm");
         var params = {
             from_name: formulario.elements.nombre.value,
@@ -39,20 +39,24 @@
             campania: formulario.elements.campania.value,
             email_id: formulario.elements.email.value
         }
-            emailjs.send("service_9c2v0ot", "template_um4pg5a", params).then(function(response) {
-            
+        // Validar si los campos están completados
+        if (params.from_name === "" || params.empresa === "" || params.campania === "" || params.email_id === "") {
+            return;
+        }
+        confetti();
+        emailjs.send("service_9c2v0ot", "template_um4pg5a", params).then(function(response) {      
             console.log('SUCCESS!', response.status, response.text);
             }, function(error) {
-            console.log('FAILED...', error);
-            });
+                console.log('FAILED...', error);
+         });
         }
     </script>
     <script src="https://hammerjs.github.io/dist/hammer.js"></script>
-    <script>
+<!--     <script>
        document.getElementsByClassName("confetti-button")[0].addEventListener("click", () => {
         confetti();
        })
-    </script>
+    </script> -->
 </head>
 
 <body>  
