@@ -1024,6 +1024,7 @@ button:active {
   height: auto;
   margin: auto;
   overflow: hidden;
+  padding-bottom: 3rem;
 }
 
 .slider2 .slide2-track {
@@ -1034,11 +1035,11 @@ button:active {
 }
 
 .slider2 .slide2 {
-  width: 600px;
+  width: 2500rem;
 }
 
 .slider2 .slide2 img {
-  width: 100%;
+  width: 120%!important;
 }
 
 @keyframes scroll {
