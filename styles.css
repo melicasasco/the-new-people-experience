@@ -1031,15 +1031,18 @@ button:active {
   display: flex;
   animation: scroll 100s linear infinite;
   -webkit-animation: scroll 100s linear infinite;
-  width: calc(600px * 10);
+  width: calc(2500px * 10);
+  
 }
 
+
 .slider2 .slide2 {
-  width: 2500rem;
+  width: 2500px;
 }
 
 .slider2 .slide2 img {
-  width: 120%!important;
+  width: 100%;
+  height: auto;
 }
 
 @keyframes scroll {
@@ -1048,7 +1051,7 @@ button:active {
       transform: translateX(0);
   }
   100% {
-      -webkit-transform: translateX(calc(-600px * 5));
-      transform: translateX(calc(-600px * 5));
+      -webkit-transform: translateX(calc(-2500px * 5));
+      transform: translateX(calc(-2500px * 5));
   }
 }
